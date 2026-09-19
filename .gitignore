@@ -1,0 +1,21 @@
+# Runtime cookie / session files
+cok.txt
+*.cookie
+*.session
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Dependencies (if composer is used later)
+vendor/
+composer.lock
