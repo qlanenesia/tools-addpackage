@@ -9,7 +9,6 @@ A web-based (PHP) tool that helps WHM and cPanel server admins manage their serv
 - External SMTP Setup: configure an external SMTP relay for the server
 - Run AutoSSL: trigger an AutoSSL check for all users at once
 - Delete Default / Unused Packages: clean up default packages or accounts you don't need
-- User Lookup: check a cPanel account summary by username
 
 ## Preview
 
