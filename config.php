@@ -1,7 +1,6 @@
 <?php
 //////////////////////////////////////////////////
 // Copyright (c) qlanenesia                     //
-// WhatsApp contact: +6285792407681             //
 //////////////////////////////////////////////////
 
 $username_root = "root"; // default root username
