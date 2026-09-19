@@ -13,7 +13,8 @@ A web-based (PHP) tool that helps WHM and cPanel server admins manage their serv
 
 ## Preview
 
-![Uploading image.png…]()
+<img width="1920" height="827" alt="Preview" src="https://github.com/user-attachments/assets/e44baa58-5368-4b7a-a05e-48a3ee2bfe17" />
+
 
 ## Requirements
 
