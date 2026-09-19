@@ -70,10 +70,31 @@ curl_setopt($qlane_curl_session, CURLOPT_SSL_VERIFYHOST, false);
 
 $qlane_response = curl_exec($qlane_curl_session);
 
+function qlane_strip_debug_keys($qlane_data) {
+    if (is_array($qlane_data)) {
+        foreach ($qlane_data as $qlane_key => $qlane_value) {
+            if ($qlane_key === '_debug') {
+                unset($qlane_data[$qlane_key]);
+                continue;
+            }
+            if (is_array($qlane_value)) {
+                $qlane_data[$qlane_key] = qlane_strip_debug_keys($qlane_value);
+            }
+        }
+    }
+    return $qlane_data;
+}
+
 if ($qlane_response === false) {
     echo json_encode(['status' => 'error', 'message' => 'Internal Forwarding Error: ' . curl_error($qlane_curl_session)]);
 } else {
-    echo $qlane_response;
+    $qlane_decoded_response = json_decode($qlane_response, true);
+    if (json_last_error() === JSON_ERROR_NONE && is_array($qlane_decoded_response)) {
+        $qlane_filtered_response = qlane_strip_debug_keys($qlane_decoded_response);
+        echo json_encode($qlane_filtered_response);
+    } else {
+        echo $qlane_response;
+    }
 }
 curl_close($qlane_curl_session);
 ?>
