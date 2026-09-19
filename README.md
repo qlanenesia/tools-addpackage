@@ -13,7 +13,7 @@ A web-based (PHP) tool that helps WHM and cPanel server admins manage their serv
 
 ## Preview
 
-Add a dashboard screenshot here so others can see what it looks like at a glance.
+![Uploading image.png…]()
 
 ## Requirements
 
@@ -25,7 +25,7 @@ Add a dashboard screenshot here so others can see what it looks like at a glance
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/USERNAME/tools-addpackage.git
+   git clone https://github.com/qlanenesia/tools-addpackage.git
    cd tools-addpackage
    ```
 
